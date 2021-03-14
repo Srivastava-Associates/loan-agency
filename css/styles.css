@@ -2393,8 +2393,8 @@ a:hover.back-to-top {
 
 	/* Projects */
 	.filter .element-item {
-		width: 13.8rem; /* to eliminate grid overflow problem on hard refresh */
-		height: 12rem;
+		width: 16.9rem; /* to eliminate grid overflow problem on hard refresh */
+		height: 14.5rem;
 	}
 
 	.filter .element-item .element-item-overlay span {
