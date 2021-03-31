@@ -1,0 +1,26 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srivastava-Associates/loan-agency.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Srivastava-Associates/loan-agency/issues"
+  },
+  "homepage": "https://github.com/Srivastava-Associates/loan-agency#readme",
+  "dependencies": {
+    "@google-cloud/firestore": "^4.9.8",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.5.0"
+  }
+}

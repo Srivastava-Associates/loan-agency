@@ -51,6 +51,13 @@
           s2.options.add(newOption);
         }
       };
+
+      function success1() {
+        document.querySelector("#lmsgSubmit").innerHTML = "Succesfully Submitted!";
+      }
+      function success2() {
+        document.querySelector("#cmsgSubmit").innerHTML = "Succesfully Submitted!";
+      }
       </script>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -98,17 +105,9 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#partners">PARTNERS</a>
                 </li>
-
-                <!-- Dropdown Menu -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#about">ABOUT</a>
                 </li>
-                <!-- end of dropdown menu -->
 
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">CONTACT</a>
@@ -753,25 +752,29 @@
                         </ul>
                     </div>
                 </div> <!-- end of col -->
+
                 <div class="col-lg-6">
 
                     <!-- Call Me Form -->
-                    <form id="callMeForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="lname" name="lname" required>
-                            <label class="label-control" for="lname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="lphone" name="lphone" required>
-                            <label class="label-control" for="lphone">Phone</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="lemail" name="lemail" required>
-                            <label class="label-control" for="lemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
+                    <form action="/callMe" method="post" onsubmit="success1()">
+                      <div class="form-group">
+                          <input type="text" class="form-control-input" id="lname" name="lname" required>
+                          <label class="label-control" for="lname">Name</label>
+                          <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group">
+                          <input type="text" class="form-control-input" id="lphone" name="lphone" required>
+                          <label class="label-control" for="lphone">Phone</label>
+                          <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group">
+                          <input type="email" class="form-control-input" id="lemail" name="lemail" required>
+                          <label class="label-control" for="lemail">Email</label>
+                          <div class="help-block with-errors"></div>
+                      </div>
+
                         <div class="form-group">
                             <select class="form-control-select" id="lselect" name="lselect" required onchange="populate(this.id, 'second')">
                                 <option class="select-option" value="" disabled selected>Interested in...</option>
@@ -790,12 +793,9 @@
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group checkbox white">
-                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>I agree with Srivastava Associates's stated <a class="white" href="privacy-policy.html">Privacy Policy</a> and <a class="white" href="terms-conditions.html">Terms & Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
+
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">CALL ME</button>
+                            <button type=submit value="submit" class="form-control-submit-button">CALL ME</button>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-message">
@@ -924,64 +924,64 @@
                     </div> <!-- end of button group -->
                     <div class="grid">
                         <div class="element-item property">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>State Bank of India</span></div><img src="images/sbi.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>State Bank of India</span></div><img src="images/sbi.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance property cv ce insurance">
-                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>ICICI Bank</span></div><img src="images/icici.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>ICICI Bank</span></div><img src="images/icici.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance property">
-                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>HDFC Bank</span></div><img src="images/hdfc.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>HDFC Bank</span></div><img src="images/hdfc.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance property ce cv hv">
-                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Indsulnd</span></div><img src="images/induslnd.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Indsulnd</span></div><img src="images/induslnd.png" alt="alternative"></a>
                         </div>
                         <div class="element-item cv finance">
-                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Kotak Mahindra Bank</span></div><img src="images/kotak.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Kotak Mahindra Bank</span></div><img src="images/kotak.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance cv ce hv">
-                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Magma</span></div><img src="images/magma.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Magma</span></div><img src="images/magma.png" alt="alternative"></a>
                         </div>
                         <div class="element-item property">
-                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Bajaj Finanace</span></div><img src="images/bajaj.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Bajaj Finanace</span></div><img src="images/bajaj.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance cv hv property">
-                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>SK Finance</span></div><img src="images/sk.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>SK Finance</span></div><img src="images/sk.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance">
-                            <a class="popup-with-move-anim" href="#project-9"><div class="element-item-overlay"><span>Hero Fianance</span></div><img src="images/hero.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Hero Fianance</span></div><img src="images/hero.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance cv ce hv property">
-                            <a class="popup-with-move-anim" href="#project-10"><div class="element-item-overlay"><span>Chola</span></div><img src="images/chola.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Chola</span></div><img src="images/chola.png" alt="alternative"></a>
                         </div>
                         <div class="element-item property">
-                            <a class="popup-with-move-anim" href="#project-11"><div class="element-item-overlay"><span>DHFL</span></div><img src="images/dhfl.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>DHFL</span></div><img src="images/dhfl.png" alt="alternative"></a>
                         </div>
                         <div class="element-item property">
-                            <a class="popup-with-move-anim" href="#project-12"><div class="element-item-overlay"><span>ICICI Housing Fianance</span></div><img src="images/icicihomeloans.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>ICICI Housing Fianance</span></div><img src="images/icicihomeloans.png" alt="alternative"></a>
                         </div>
                         <div class="element-item property">
-                            <a class="popup-with-move-anim" href="#project-13"><div class="element-item-overlay"><span>Capri Global</span></div><img src="images/capriglobal.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Capri Global</span></div><img src="images/capriglobal.png" alt="alternative"></a>
                         </div>
                         <div class="element-item property">
-                            <a class="popup-with-move-anim" href="#project-14"><div class="element-item-overlay"><span>Aadhar Housing</span></div><img src="images/aadharhousing.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Aadhar Housing</span></div><img src="images/aadharhousing.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance cv ce hv">
-                            <a class="popup-with-move-anim" href="#project-15"><div class="element-item-overlay"><span>IKF</span></div><img src="images/ikf.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>IKF</span></div><img src="images/ikf.png" alt="alternative"></a>
                         </div>
                         <div class="element-item insurance">
-                            <a class="popup-with-move-anim" href="#project-16"><div class="element-item-overlay"><span>Star Health</span></div><img src="images/star health.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Star Health</span></div><img src="images/star health.png" alt="alternative"></a>
                         </div>
                         <div class="element-item finance cv ce hv">
-                            <a class="popup-with-move-anim" href="#project-17"><div class="element-item-overlay"><span>Equitas</span></div><img src="images/equitas.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>Equitas</span></div><img src="images/equitas.png" alt="alternative"></a>
                         </div>
                         <div class="element-item insurance">
-                            <a class="popup-with-move-anim" href="#project-18"><div class="element-item-overlay"><span>ICICI Lombard</span></div><img src="images/icici lombard.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>ICICI Lombard</span></div><img src="images/icici lombard.png" alt="alternative"></a>
                         </div>
                         <div class="element-item insurance">
-                            <a class="popup-with-move-anim" href="#project-19"><div class="element-item-overlay"><span>HDFC ERGO</span></div><img src="images/hdfc ergo.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>HDFC ERGO</span></div><img src="images/hdfc ergo.png" alt="alternative"></a>
                         </div>
                         <div class="element-item insurance">
-                            <a class="popup-with-move-anim" href="#project-20"><div class="element-item-overlay"><span>ICICI Prudential</span></div><img src="images/icici prudential.png" alt="alternative"></a>
+                            <a class="popup-with-move-anim"><div class="element-item-overlay"><span>ICICI Prudential</span></div><img src="images/icici prudential.png" alt="alternative"></a>
                         </div>
                     </div> <!-- end of grid -->
                     <!-- end of filter -->
@@ -992,360 +992,6 @@
     </div> <!-- end of filter -->
     <!-- end of projects -->
 
-
-    <!-- Project Lightboxes -->
-    <!-- Lightbox -->
-    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/sbi.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>State Bank of India</h3>
-                <hr class="line-heading">
-                <h6></h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/icici.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Classic Industry</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/hdfc.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>BoomBap Audio</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/induslnd.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Van Moose</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/kotak.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Joy Moments</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-6" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/magma.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Spark Events</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-7" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/bajaj.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Casual Wear</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-8" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/sk.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-9" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/hero.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-10" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/chola.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-11" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/dhfl.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-12" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/icicihomeloans.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-13" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/capriglobal.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-14" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/aadharhousing.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
-
-    <!-- Lightbox -->
-    <div id="project-15" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/ikf.png" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
-                <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
 
     <!-- About -->
     <div id="about" class="counter">
@@ -1455,28 +1101,30 @@
                 <div class="col-lg-6">
 
                     <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <form action="/getInContact" method=post onsubmit="success2()">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
+                            <input type="text" name="cname" class="form-control-input" id="cname" required>
                             <label class="label-control" for="cname">Name</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
+                            <input type="text" name="cphone" class="form-control-input" id="cphone" required>
+                            <label class="label-control" for="cphone">Phone No.</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="cemail" class="form-control-input" id="cemail" required>
                             <label class="label-control" for="cemail">Email</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
+                            <textarea name="cmessage" class="form-control-textarea" id="cmessage" required></textarea>
                             <label class="label-control" for="cmessage">Your message</label>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Srivastava Associates's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
+
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                            <button type="submit" value="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
                         </div>
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
@@ -1512,7 +1160,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://srivastava-associates.github.io/loan-agency/">Srivastava Associates</a></p>
+                    <p class="p-small">Copyright © 2021 <a href="https://srivastava-associates.github.io/loan-agency/">Srivastava Associates</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
