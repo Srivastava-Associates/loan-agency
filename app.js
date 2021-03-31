@@ -72,6 +72,7 @@ app.post('/getInContact', function(req, res){
   });
 })
 
-app.listen(3000 || process.env.PORT, function(){
+const PORT = 0.0.0.0 || 3000;
+app.listen(PORT, function(){
   console.log("server started on port 3000");
 });
